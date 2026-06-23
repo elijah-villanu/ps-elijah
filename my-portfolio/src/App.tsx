@@ -1,7 +1,14 @@
+import Navbar from "./components/Navbar"
+
 function App() {
 
   return (
-    <div></div>
+    <div className="font-jetbrain">
+      <Navbar />
+      <div className="max-w-3xl">
+
+      </div>
+    </div>
   )
 }
 
