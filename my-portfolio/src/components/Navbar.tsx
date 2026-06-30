@@ -6,7 +6,7 @@ function Navbar() {
             <div id="logo">
                 <h1>EV</h1>
             </div>
-            <div id="links" className="flex gap-4">
+            <div id="links" className="flex gap-12">
                 <h1>ABOUT ME</h1>
                 <h1>PROJECTS</h1>
                 <h1>CONTACT</h1>
