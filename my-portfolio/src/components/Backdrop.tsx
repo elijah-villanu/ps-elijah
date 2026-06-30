@@ -74,7 +74,7 @@ function Backdrop({ activeSection }: BackdropProps) {
                 const amplitude = 20 + i * 6 + Math.sin(t * 0.7 + i) * 15;
                 const frequency = 0.004 + i * 0.0003;
                 const speed = t * (0.4 + i * 0.02);
-                const alpha = 0.06 + (1 - progress) * 0.12 + Math.sin(t + i) * 0.02;
+                const alpha = 0.09 + (1 - progress) * 0.12 + Math.sin(t + i) * 0.02;
                 const lineHue = hue + i * 5;
 
                 ctx.beginPath();
@@ -129,7 +129,7 @@ function Backdrop({ activeSection }: BackdropProps) {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 z-0 block"
+            className="fixed inset-0 -z-100 block"
         />
     )
 }

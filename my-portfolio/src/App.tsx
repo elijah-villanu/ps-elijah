@@ -1,5 +1,6 @@
 import Backdrop from "./components/Backdrop"
 import Navbar from "./components/Navbar"
+import AboutPage from "./pages/AboutPage"
 
 function App() {
 
@@ -9,8 +10,10 @@ function App() {
         activeSection="projects"
       />
       <Navbar />
-      <div className="max-w-3xl">
-
+      <div className="flex justify-center">
+        <div className="max-w-3xl mt-12">
+          <AboutPage/>
+        </div>
       </div>
     </div>
   )

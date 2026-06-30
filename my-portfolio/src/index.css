@@ -2,4 +2,24 @@
 
 @theme {
   --font-jetbrain: "JetBrains Mono", monospace;
+  --font-body: "Roboto", monospace;
+}
+
+@layer base {
+  h1 {
+    font-family: var(--font-jetbrain);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h2{
+    font-family: var(--font-jetbrain);
+    font-size: 1.5rem;    
+  }
+  h3{
+    font-family: var(--font-jetbrain);
+    font-size: 1.25rem;    
+  }
+  p {
+    font-family: var(--font-sans);
+  }
 }
