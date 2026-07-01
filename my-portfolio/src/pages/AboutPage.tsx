@@ -1,15 +1,38 @@
 import githubIcon from "../assets/github.svg"
 import linkedinIcon from "../assets/linkedin.svg"
 import itchioIcon from "../assets/itchio.svg"
+import { Icon } from "@iconify/react"
 
 function AboutPage() {
     return (
         <div className="w-full">
             <div className="flex min-h-11 h-fit gap-4">
                 <section id="about-id"
-                    className="bg-gray-300/35 p-6 min-w-60 rounded-2xl">
+                    className="flex flex-col gap-4 bg-gray-300/35 p-6 min-w-60 rounded-2xl">
                     <img src="../assets/react.svg"></img>
                     <h2>Elijah Villanueva</h2>
+                    {/* email, school, degree, city */}
+                    <div id="about-id-content"
+                        className="flex flex-col gap-2 [&>div]:flex [&>div]:items-center [&>div]:gap-3"
+                    >
+                        <div>
+                            <Icon icon="ic:outline-email" />
+                            <p>elijahrvillan@gmail.com</p>
+                        </div>
+                        <div>
+                            <Icon icon="teenyicons:school-outline" />
+                            <p>California Polytechnic State University</p>
+                        </div>
+                        <div>
+                            <Icon icon="simple-line-icons:graduation" />
+                            <p>B.S. Computer Science</p>
+                        </div>
+                        <div>
+                            <Icon icon="iconamoon:location" />
+                            <p>Santa Maria, CA</p>
+                        </div>
+
+                    </div>
                     <div id="about-id-socials"
                         className="flex gap-3 justify-between"
                     >
@@ -18,7 +41,7 @@ function AboutPage() {
                                 className="max-w-12"
                             ></img>
                         </a>
-                        <a href="www.linkedin.com/in/elijah-villanueva">
+                        <a href="https://linkedin.com/in/elijah-villanueva">
                             <img src={linkedinIcon}
                                 className="max-w-12"
                             ></img>
