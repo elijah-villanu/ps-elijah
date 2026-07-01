@@ -1,34 +1,55 @@
 import githubIcon from "../assets/github.svg"
 import linkedinIcon from "../assets/linkedin.svg"
 import itchioIcon from "../assets/itchio.svg"
+import re8Icon from "../assets/re8.png"
+import profileIcon from "../assets/profile.jpg"
 import { Icon } from "@iconify/react"
+import TechItem from "../components/TechItem"
 
-function AboutPage() {
+interface AboutPageProps {
+    aboutText: string
+}
+
+// Media Query at 650px
+
+function AboutPage({ aboutText }: AboutPageProps) {
     return (
         <div className="w-full">
-            <div className="flex min-h-11 h-fit gap-4">
+            <div className="flex min-h-11 h-fit gap-4 mb-4">
                 <section id="about-id"
                     className="flex flex-col gap-4 bg-gray-300/35 p-6 min-w-60 rounded-2xl">
-                    <img src="../assets/react.svg"></img>
-                    <h2>Elijah Villanueva</h2>
+                    <div className="flex justify-center">
+                        <img src={profileIcon}
+                            className="max-w-30 rounded-full"
+                        ></img>
+                    </div>
+                    <h2 className="font-bold">Elijah Villanueva</h2>
                     {/* email, school, degree, city */}
                     <div id="about-id-content"
-                        className="flex flex-col gap-2 [&>div]:flex [&>div]:items-center [&>div]:gap-3"
+                        className="flex flex-col gap-2 [&>div]:flex [&>div]:items-center [&>div]:gap-3 "
                     >
                         <div>
-                            <Icon icon="ic:outline-email" />
+                            <Icon icon="ic:outline-email"
+                                className="size-4 shrink-0"
+                            />
                             <p>elijahrvillan@gmail.com</p>
                         </div>
                         <div>
-                            <Icon icon="teenyicons:school-outline" />
+                            <Icon icon="teenyicons:school-outline"
+                                className="size-4 shrink-0"
+                            />
                             <p>California Polytechnic State University</p>
                         </div>
                         <div>
-                            <Icon icon="simple-line-icons:graduation" />
+                            <Icon icon="simple-line-icons:graduation"
+                                className="size-4 shrink-0"
+                            />
                             <p>B.S. Computer Science</p>
                         </div>
                         <div>
-                            <Icon icon="iconamoon:location" />
+                            <Icon icon="iconamoon:location"
+                                className="size-4 shrink-0"
+                            />
                             <p>Santa Maria, CA</p>
                         </div>
 
@@ -56,15 +77,48 @@ function AboutPage() {
                 <section id="about-text"
                     className="bg-gray-300/35 p-6 rounded-2xl"
                 >
-                    <h1>Welcome</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit orci ac blandit commodo. Suspendisse dapibus, enim nec mattis placerat, metus turpis molestie libero, a hendrerit metus tortor nec tellus. Sed consectetur fringilla mauris vitae tristique. Nullam at libero metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce sit amet molestie nisl, at tincidunt urna. Mauris tristique, lectus et euismod ornare, sem leo dapibus libero, ac iaculis nisl est sed ligula. Integer quam erat, porttitor ac augue tincidunt, aliquam finibus nulla. Integer vel metus vel turpis malesuada congue quis non leo. Vestibulum egestas, ligula a lacinia mattis, enim odio posuere turpis, a tempor urna nunc id velit.</p>
+                    <h1>Hello</h1>
+                    <p className="whitespace-pre-line">{aboutText}</p>
                 </section>
             </div>
-            <div className="flex">
-                <section id="about-skills">
-
+            <div className="flex min-h-11 h-fit gap-4">
+                <section id="about-technology"
+                    className="bg-gray-300/35 p-6 min-w-60 rounded-2xl"
+                >
+                    <h3>Skills</h3>
+                    <div className="flex flex-wrap gap-3 gap-y-1">
+                        <TechItem item="Python" />
+                        <TechItem item="Typescript" />
+                        <TechItem item="GDScript" />
+                        <TechItem item="C++" />
+                        <TechItem item="SQL" />
+                        <TechItem item="React" />
+                        <TechItem item="Astro" />
+                        <TechItem item="TailwindCSS" />
+                        <TechItem item="HTML" />
+                        <TechItem item="Unity + C#" />
+                        <TechItem item="Godot" />
+                        <TechItem item="Docker" />
+                        <TechItem item="FastAPI" />
+                        <TechItem item="Github" />
+                        <TechItem item="UI/UX" />
+                        <TechItem item="Research" />
+                    </div>
                 </section>
-                <section id="about-playing">
+                <section id="about-playing"
+                    className="flex flex-col gap-2 min-w-60 bg-gray-300/35 p-6 min-w-60 rounded-2xl"
+                >
+                    <div className="flex items-center gap-2">
+                        <Icon icon="ri:playstation-fill"></Icon>
+                        <h3>I'm Playing:</h3>
+                    </div>
+                    <div className="flex gap-1 items-start">
+                        <img src={re8Icon}
+                            className="max-w-15 rounded-md mb-2"
+                        >
+                        </img>
+                        <p>Resident Evil Village</p>
+                    </div>
 
                 </section>
             </div>
