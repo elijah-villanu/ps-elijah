@@ -1,6 +1,9 @@
+import { useState } from "react";
 import Backdrop from "./components/Backdrop"
 import Navbar from "./components/Navbar"
 import AboutPage from "./pages/AboutPage"
+import ProjectsPage from "./pages/ProjectsPage";
+import type { Page } from "./types";
 
 const about: string = `Welcome! I'm Elijah Villanueva, and I'm a senior from California Polytechnic State University, San Luis Obispo! I'm expected to get my Bachelor's Degree in Computer Science this August 2026. I'm passionate about game developement, system design (yes, I own Designing Data-Intensive Applications by  Martin Kleppman), and computer graphics; but honestly, anything tech gets me excited!
   
@@ -9,18 +12,33 @@ const about: string = `Welcome! I'm Elijah Villanueva, and I'm a senior from Cal
   On my free time, I play video games, make LoFi Beats, and play the drum set!
   `
 function App() {
+  // Track page state to render chosen page
+  const [activePage, setActivePage] = useState<Page>("about");
+
+  // Returns page to render based on state
+  function renderPage() {
+    switch (activePage) {
+      case "about":
+        return <AboutPage aboutText={about} />
+      case "projects":
+        return <ProjectsPage />
+      default:
+        return <AboutPage aboutText={about} />
+    }
+  }
 
   return (
     <div className="font-jetbrain">
       <Backdrop
         activeSection="projects"
       />
-      <Navbar />
+      <Navbar 
+        activePage={activePage}
+        setActivePage={setActivePage}
+      />
       <div className="flex justify-center">
-        <div className="max-w-3xl mt-12 ml-4 mr-4">
-          <AboutPage
-            aboutText={about}
-          />
+        <div className="max-w-3xl mt-8 ml-4 mr-4 mb-8">
+          {renderPage()}
         </div>
       </div>
     </div>

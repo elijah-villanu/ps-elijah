@@ -1,6 +1,8 @@
 function ProjectsPage() {
     return(
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
 
