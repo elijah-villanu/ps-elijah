@@ -17,7 +17,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
         <div className="w-full">
             <div className="flex min-h-11 h-fit gap-4 mb-4">
                 <section id="about-id"
-                    className="flex flex-col gap-4 bg-gray-300/35 p-6 min-w-60 rounded-2xl">
+                    className="flex flex-col gap-4 bg-gray-300/45 p-6 min-w-60 rounded-2xl">
                     <div className="flex justify-center">
                         <img src={profileIcon}
                             className="max-w-30 rounded-full"
@@ -75,7 +75,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     </div>
                 </section>
                 <section id="about-text"
-                    className="bg-gray-300/35 p-6 rounded-2xl"
+                    className="bg-gray-300/45 p-6 rounded-2xl"
                 >
                     <h1>Hello</h1>
                     <p className="whitespace-pre-line">{aboutText}</p>
@@ -83,7 +83,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
             </div>
             <div className="flex min-h-11 h-fit gap-4">
                 <section id="about-technology"
-                    className="bg-gray-300/35 p-6 min-w-60 rounded-2xl"
+                    className="bg-gray-300/45 p-6 min-w-60 rounded-2xl"
                 >
                     <h3>Skills</h3>
                     <div className="flex flex-wrap gap-3 gap-y-1">
@@ -106,7 +106,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     </div>
                 </section>
                 <section id="about-playing"
-                    className="flex flex-col gap-2 min-w-60 bg-gray-300/35 p-6 min-w-60 rounded-2xl"
+                    className="flex flex-col gap-2 min-w-60 bg-gray-300/45 p-6 min-w-60 rounded-2xl"
                 >
                     <div className="flex items-center gap-2">
                         <Icon icon="ri:playstation-fill"></Icon>

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import type { Section } from "../types";
+import type { Page } from "../types";
 
 interface BackdropProps {
-    activeSection: Section;
+    activePage: Page;
 }
 
 interface Orb {
@@ -12,15 +12,14 @@ interface Orb {
     phase: number;
 }
 
-// Each section will have a different hue
-const sectionHues: Record<Section, number> = {
+// Each Page will have a different hue
+const PageHues: Record<Page, number> = {
     about: 210,
     projects: 270,
-    contact: 180,
 };
 
-// Send in active section via props
-function Backdrop({ activeSection }: BackdropProps) {
+// Send in active Page via props
+function Backdrop({ activePage }: BackdropProps) {
     // Draw functions for animated background
     // useRef to prevent rerenders
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -30,8 +29,8 @@ function Backdrop({ activeSection }: BackdropProps) {
     const rafRef = useRef<number | null>(null);
 
     useEffect(() => {
-        targetHueRef.current = sectionHues[activeSection] ?? 210;
-    }, [activeSection]);
+        targetHueRef.current = PageHues[activePage] ?? 210;
+    }, [activePage]);
 
     useEffect(() => {
         const canvas = canvasRef.current;

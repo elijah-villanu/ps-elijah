@@ -16,14 +16,14 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
         >
             <div className="mx-auto w-full max-w-3xl flex justify-between items-center">
                 <h3>ELIJAH VILLANUEVA</h3>
-                <div id="links" className="flex gap-12">
+                <div id="links" className="flex gap-9">
                     {navItems.map((item) => (
                         <button
                             key={item.page}
                             onClick={() => setActivePage(item.page)}
                             className={`cursor-pointer rounded-full px-4 py-2 transition-all duration-300 ${activePage === item.page
-                                ? "bg-white/20 text-black shadow-[0_0_20px_rgba(255,255,255,0.35)]"
-                                : "text-black hover:bg-white/10 hover:text-white"
+                                ? "bg-white/20 text-black"
+                                : "text-black hover:bg-white/10"
                                 }`}
                         >
                             {item.label}

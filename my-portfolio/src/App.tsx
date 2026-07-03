@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="font-jetbrain">
       <Backdrop
-        activeSection="projects"
+        activePage={activePage}
       />
       <Navbar 
         activePage={activePage}
