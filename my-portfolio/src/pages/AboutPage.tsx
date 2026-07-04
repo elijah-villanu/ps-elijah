@@ -89,7 +89,6 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     <div className="flex flex-wrap gap-3 gap-y-1">
                         <TechItem item="Python" />
                         <TechItem item="Typescript" />
-                        <TechItem item="GDScript" />
                         <TechItem item="C++" />
                         <TechItem item="SQL" />
                         <TechItem item="React" />
@@ -97,7 +96,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                         <TechItem item="TailwindCSS" />
                         <TechItem item="HTML" />
                         <TechItem item="Unity + C#" />
-                        <TechItem item="Godot" />
+                        <TechItem item="Godot + GDScript" />
                         <TechItem item="Docker" />
                         <TechItem item="FastAPI" />
                         <TechItem item="Github" />

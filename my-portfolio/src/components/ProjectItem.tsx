@@ -11,8 +11,10 @@ function ProjectItem({ title, description, imgPath, link, skills }: ProjectItemP
     return (
         <div>
             <a href={link}>
-                <div className="flex justify-between hover:bg-gray-300/45 transition-all duration-300">
-                    <img src={imgPath}></img>
+                <div className="flex justify-between gap-4 hover:bg-gray-300/45 transition-all duration-300">
+                    <img src={imgPath}
+                        className="max-w-50 max-h-50">
+                    </img>
                     <div className="flex flex-col gap-4">
                         <h3>{title}</h3>
                         <p>{description}</p>
