@@ -50,7 +50,7 @@ const projects = [
 
 function ProjectsPage() {
     return (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-7">
             {projects.map((project) => (
                 <ProjectItem
                     key={project.title}

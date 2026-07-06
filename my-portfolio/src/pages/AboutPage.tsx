@@ -10,12 +10,10 @@ interface AboutPageProps {
     aboutText: string
 }
 
-// Media Query at 650px
-
 function AboutPage({ aboutText }: AboutPageProps) {
     return (
         <div className="w-full">
-            <div className="flex min-h-11 h-fit gap-4 mb-4">
+            <div className="flex min-h-11 h-fit gap-4 mb-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">
                 <section id="about-id"
                     className="flex flex-col gap-4 bg-gray-300/45 p-6 min-w-60 rounded-2xl">
                     <div className="flex justify-center">
@@ -81,7 +79,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     <p className="whitespace-pre-line">{aboutText}</p>
                 </section>
             </div>
-            <div className="flex min-h-11 h-fit gap-4">
+            <div className="flex min-h-11 h-fit gap-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">
                 <section id="about-technology"
                     className="bg-gray-300/45 p-6 min-w-60 rounded-2xl"
                 >
