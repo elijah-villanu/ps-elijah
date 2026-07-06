@@ -14,4 +14,5 @@ export default defineConfig({
       interval: 1000,      // ← check every 100ms (lower = faster but more CPU)
     },
   },
+  base: "/",
 })
