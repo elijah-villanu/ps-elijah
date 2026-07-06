@@ -19,6 +19,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      APP_DIR: my-portfolio
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -28,17 +31,20 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: ${{ env.APP_DIR }}/package-lock.json
 
       - name: Install dependencies
+        working-directory: ${{ env.APP_DIR }}
         run: npm ci
 
       - name: Build site
+        working-directory: ${{ env.APP_DIR }}
         run: npm run build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ${{ env.APP_DIR }}/dist
 
   deploy:
     environment:
