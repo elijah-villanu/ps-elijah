@@ -15,7 +15,7 @@ interface Orb {
 // Each Page will have a different hue
 const PageHues: Record<Page, number> = {
     about: 210,
-    projects: 270,
+    projects: 210,
 };
 
 // Send in active Page via props
@@ -77,7 +77,7 @@ function Backdrop({ activePage }: BackdropProps) {
                 const lineHue = hue + i * 5;
 
                 ctx.beginPath();
-                ctx.strokeStyle = `hsla(${lineHue},90%,65%,${alpha})`;
+                ctx.strokeStyle = `hsla(${lineHue},0%,50%,${alpha})`;
                 ctx.lineWidth = 1.2 + (1 - progress) * 0.9;
 
                 for (let x = 0; x <= W; x += 3) {

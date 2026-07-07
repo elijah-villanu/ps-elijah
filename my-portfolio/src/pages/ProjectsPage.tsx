@@ -7,7 +7,7 @@ import ecosystemIcon from "../assets/projects/ecosystem.png"
 
 const projects = [
     {
-        title: "Ocean Site One VR (Contributer)",
+        title: "Ocean Site One VR (Contributor)",
         description:
             "(Private Repo) An interactive VR experience based of the defunct oil platforms along California's Coast. Over time, populace artifical reefs formed on the rigs' base, creating it's own marine ecosystem. The goal of the project is to increase awareness and empathy for such life as decisions continue to be made for the oil rigs' future: whether that's removal or preservation.",
         imgPath: osoIcon,
@@ -15,7 +15,7 @@ const projects = [
         skills: ["Unity + C#", "Github", "Agile/Scrum"],
     },
     {
-        title: "Potion Profits (Contributer)",
+        title: "Potion Profits (Contributor)",
         description:
             "A small potion selling game where you try to pay back (or gamble) your debt. In addition to being my senior project, this is the first game I've made at this scale. This game was made on a team of six with my senior advisor acting as our product manager.",
         imgPath: potionIcon,
@@ -39,7 +39,7 @@ const projects = [
         skills: ["UI/UX", "Research", "Typescript", "Astro", "Qualitative Coding"],
     },
     {
-        title: "Ecosystem Simulation API (Contributer)",
+        title: "Ecosystem Simulation API (Contributor)",
         description:
             "Contributed to creating a RESTful API that handles all in-game logic for an ecosystem simulator made in Pygame. In addition to assisting with endpoint design and implementation, I performed end point testing and query optimization with SQL's EXPLAIN and Docker.",
         imgPath: ecosystemIcon,

@@ -9,9 +9,10 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
+    // Polls for changes instead of OS file checks (running on WSL)
     watch: {
-      usePolling: true,   // ← polls for file changes instead of relying on OS events
-      interval: 1000,      // ← check every 100ms (lower = faster but more CPU)
+      usePolling: true,
+      interval: 1000,
     },
   },
   base: "/",

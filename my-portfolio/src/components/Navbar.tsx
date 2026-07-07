@@ -15,7 +15,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
     ];
 
     return (
-        <nav className="sticky top-0 z-10 border-b border-white/8 bg-black/35 p-4 shadow-[0_2px_30px_rgba(0,0,0,0.4)] backdrop-blur-md">
+        <nav className="sticky top-0 z-10 border-b border-white/8 bg-black/10 p-4 backdrop-blur-md">
             <div className="mx-auto flex w-full max-w-3xl items-center justify-between">
                 <h3>ELIJAH VILLANUEVA</h3>
 
