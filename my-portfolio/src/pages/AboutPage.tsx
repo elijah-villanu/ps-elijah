@@ -81,10 +81,10 @@ function AboutPage({ aboutText }: AboutPageProps) {
             </div>
             <div className="flex min-h-11 h-fit gap-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">
                 <section id="about-technology"
-                    className="bg-gray-300/45 p-6 min-w-60 rounded-2xl"
+                    className="flex flex-col bg-gray-300/45 p-6 min-w-60 rounded-2xl gap-2"
                 >
-                    <h3>Skills</h3>
-                    <div className="flex flex-wrap gap-3 gap-y-1">
+                    <h2 className="font-bold">Skills</h2>
+                    <div className="flex flex-wrap mt-1.25 gap-3 gap-y-1">
                         <TechItem item="Python" />
                         <TechItem item="Typescript" />
                         <TechItem item="C++" />
@@ -106,12 +106,12 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     className="flex flex-col gap-2 min-w-60 bg-gray-300/45 p-6 min-w-60 rounded-2xl"
                 >
                     <div className="flex items-center gap-2">
-                        <Icon icon="ri:playstation-fill"></Icon>
-                        <h3>I'm Playing:</h3>
+                        <Icon icon="ri:playstation-fill" className="w-7 h-7"></Icon>
+                        <h2 className="font-bold">Playing:</h2>
                     </div>
-                    <div className="flex gap-1 items-start">
+                    <div className="flex gap-4 items-start">
                         <img src={re8Icon}
-                            className="max-w-15 rounded-md mb-2"
+                            className="max-w-15 mt-1.25 rounded-md mb-2"
                         >
                         </img>
                         <p>Resident Evil Village</p>
