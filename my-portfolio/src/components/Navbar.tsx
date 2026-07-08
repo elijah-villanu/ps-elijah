@@ -25,9 +25,12 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                         <button
                             key={item.page}
                             onClick={() => setActivePage(item.page)}
-                            className={`cursor-pointer rounded-full px-4 py-2 transition-all duration-300 ${activePage === item.page
-                                    ? "bg-white/20 text-black"
-                                    : "text-black hover:bg-white/10"
+                            className={`relative cursor-pointer px-4 py-2 text-black transition-all duration-300
+                                after:absolute after:bottom-1 after:left-4 after:h-0.5 after:bg-black
+                                after:transition-all after:duration-300 after:ease-out
+                                ${activePage === item.page
+                                    ? "after:w-[calc(100%-2rem)]"
+                                    : "after:w-0 hover:after:w-[calc(100%-2rem)] hover:after:bg-black/40"
                                 }`}
                         >
                             {item.label}
@@ -60,8 +63,8 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                                 setIsMenuOpen(false);
                             }}
                             className={`cursor-pointer rounded-xl px-4 py-3 text-left transition-all duration-300 ${activePage === item.page
-                                    ? "bg-white/20 text-black"
-                                    : "text-black hover:bg-white/10"
+                                ? "bg-white/20 text-black"
+                                : "text-black hover:bg-white/10"
                                 }`}
                         >
                             {item.label}

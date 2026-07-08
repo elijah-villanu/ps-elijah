@@ -13,10 +13,13 @@ function ProjectItem({ title, description, imgPath, link, skills }: ProjectItemP
             <a href={link}>
                 <div className="group flex justify-between gap-7 max-[500px]:flex-col">
                     <img src={imgPath}
-                        className="max-w-50 max-h-50 transition-transform duration-300 group-hover:scale-105">
+                        className="max-w-50 max-h-50 mt-1.25 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
                     </img>
                     <div className="flex flex-col gap-4">
-                        <h3 className="hover:underline transition-all duration-300">
+                        <h3 className="relative w-fit transition-all duration-300
+                                after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-black
+                                after:transition-all after:duration-300 after:ease-out
+                                after:w-0 hover:after:w-full">
                             {title}
                         </h3>
                         <p>{description}</p>
