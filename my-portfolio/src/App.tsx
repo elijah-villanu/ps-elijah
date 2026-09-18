@@ -38,7 +38,7 @@ function App() {
   }
 
   return (
-    <div className="font-jetbrain">
+    <div className="font-mono">
       <Backdrop
         activePage={activePage}
       />
@@ -47,7 +47,7 @@ function App() {
         setActivePage={setActivePage}
       />
       <div className="flex justify-center">
-        <div className="max-w-3xl mt-8 ml-4 mr-4 mb-8">
+        <div className="max-w-3xl mt-4 ml-4 mr-4 mb-4">
           {renderPage()}
         </div>
       </div>
