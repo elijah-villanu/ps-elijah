@@ -15,7 +15,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
         <div className="w-full">
             <div className="flex min-h-11 h-fit gap-4 mb-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">
                 <section id="about-id"
-                    className="flex flex-col gap-4 bg-gray-300/45 p-6 min-w-60 rounded-2xl">
+                    className="flex flex-col gap-4 p-6 min-w-60 rounded-2xl border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]">
                     <div className="flex justify-center">
                         <img src={profileIcon}
                             className="max-w-30 rounded-full"
@@ -73,7 +73,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     </div>
                 </section>
                 <section id="about-text"
-                    className="bg-gray-300/45 p-6 rounded-2xl"
+                    className="p-6 rounded-2xl border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]"
                 >
                     <h1>Hello</h1>
                     <p className="whitespace-pre-line">{aboutText}</p>
@@ -81,7 +81,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
             </div>
             <div className="flex min-h-11 h-fit gap-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">
                 <section id="about-technology"
-                    className="flex flex-col bg-gray-300/45 p-6 min-w-60 rounded-2xl gap-2"
+                    className="flex flex-col p-6 min-w-60 rounded-2xl gap-2 border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]"
                 >
                     <h2 className="font-bold">Skills</h2>
                     <div className="flex flex-wrap mt-1.25 gap-3 gap-y-1">
@@ -103,7 +103,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     </div>
                 </section>
                 <section id="about-playing"
-                    className="flex flex-col gap-2 min-w-60 bg-gray-300/45 p-6 min-w-60 rounded-2xl"
+                    className="flex flex-col gap-2 p-6 min-w-60 rounded-2xl border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]"
                 >
                     <div className="flex items-center gap-2">
                         <Icon icon="ri:playstation-fill" className="w-7 h-7"></Icon>
