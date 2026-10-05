@@ -15,7 +15,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
     ];
 
     return (
-        <nav className="sticky top-0 z-10 border-b border-white/8 bg-black/10 p-4 backdrop-blur-md">
+        <nav className="sticky top-0 z-10 bg-gray-300 p-4">
             <div className="mx-auto flex w-full max-w-3xl items-center justify-between">
                 <h1 className="text-4xl">Elijah Villanueva</h1>
 
@@ -62,7 +62,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                                 setActivePage(item.page);
                                 setIsMenuOpen(false);
                             }}
-                            className={`cursor-pointer rounded-xl px-4 py-3 text-left transition-all duration-300 ${activePage === item.page
+                            className={`cursor-pointer rounded-xl px-4 py-3 text-left font-sans transition-all text-22 font-bold duration-300 ${activePage === item.page
                                 ? "bg-white/20 text-black"
                                 : "text-black hover:bg-white/10"
                                 }`}

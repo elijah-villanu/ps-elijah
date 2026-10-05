@@ -10,6 +10,22 @@ interface AboutPageProps {
     aboutText: string
 }
 
+const techItems = 
+    {
+        languageItems: ["Python", "TypeScript", "JavaScript", "C#", "C++", "SQL"],
+        frameworkItems: ["React", "SvelteKit", "HTML + CSS", "FastAPI", "Node", "Unity", "Godot"],
+        toolsItems: ["GitHub", "Docker", "AWS", "PostgreSQL", "Claude", "MCP"]
+    }
+
+// Caption shown above each techItems group
+const skillGroups = [
+    { caption: "Languages", items: techItems.languageItems },
+    { caption: "Frameworks & Engines", items: techItems.frameworkItems },
+    { caption: "Tools", items: techItems.toolsItems },
+]
+
+
+
 function AboutPage({ aboutText }: AboutPageProps) {
     return (
         <div className="w-full">
@@ -81,25 +97,20 @@ function AboutPage({ aboutText }: AboutPageProps) {
             </div>
             <div className="flex min-h-11 h-fit gap-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">
                 <section id="about-technology"
-                    className="flex flex-col p-6 min-w-60 rounded-2xl gap-2 border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]"
+                    className="flex flex-col flex-1 p-6 rounded-2xl gap-2 border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]"
                 >
                     <h2 className="font-bold">Skills</h2>
-                    <div className="flex flex-wrap mt-1.25 gap-3 gap-y-1">
-                        <TechItem item="Python" />
-                        <TechItem item="Typescript" />
-                        <TechItem item="C++" />
-                        <TechItem item="SQL" />
-                        <TechItem item="React" />
-                        <TechItem item="Astro" />
-                        <TechItem item="TailwindCSS" />
-                        <TechItem item="HTML" />
-                        <TechItem item="Unity + C#" />
-                        <TechItem item="Godot + GDScript" />
-                        <TechItem item="Docker" />
-                        <TechItem item="FastAPI" />
-                        <TechItem item="Github" />
-                        <TechItem item="UI/UX" />
-                        <TechItem item="Research" />
+                    <div className="flex flex-col gap-4 mt-1.5">
+                        {skillGroups.map((group) => (
+                            <div key={group.caption}>
+                                <h3 className="text-[13px] italic">{group.caption}</h3>
+                                <div className="flex flex-wrap gap-x-5 gap-y-4 mt-2">
+                                    {group.items.map((item) => (
+                                        <TechItem key={item} item={item} />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
                 <section id="about-playing"
