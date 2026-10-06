@@ -92,7 +92,7 @@ function AboutPage({ aboutText }: AboutPageProps) {
                     className="p-6 rounded-2xl border-[3px] border-white/30 bg-white/20 backdrop-blur-[2px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]"
                 >
                     <h1>Hello</h1>
-                    <p className="whitespace-pre-line">{aboutText}</p>
+                    <p className="whitespace-pre-line pt-2">{aboutText}</p>
                 </section>
             </div>
             <div className="flex min-h-11 h-fit gap-4 max-[600px]:flex-col max-[600px]:[&>section]:w-full">

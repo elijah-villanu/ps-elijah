@@ -31,7 +31,7 @@ function TechItem({item}: TechItemProps) {
     return(
         <div className="group relative flex flex-col items-center gap-1.5 max-[600px]:w-14">
             {/* Name pops up above the icon on hover (desktop only) */}
-            <span className="pointer-events-none absolute bottom-[calc(100%+8px)] left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-black/85 px-[9px] py-1 font-sans text-[11px] font-medium leading-[1.4] text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 max-[600px]:hidden">
+            <span className="pointer-events-none absolute bottom-[calc(100%+8px)] left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-black/85 px-2.25 py-1 font-sans text-[11px] font-medium leading-[1.4] text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 max-[600px]:hidden">
                 {item}
             </span>
             <Icon icon={techIcons[item]} className="size-10" />

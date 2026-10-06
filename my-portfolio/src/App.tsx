@@ -47,7 +47,7 @@ function App() {
         setActivePage={setActivePage}
       />
       <div className="flex justify-center">
-        <div className="max-w-3xl mt-4 ml-4 mr-4 mb-4">
+        <div className="min-w-0 max-w-5xl mt-4 ml-4 mr-4 mb-4">
           {renderPage()}
         </div>
       </div>

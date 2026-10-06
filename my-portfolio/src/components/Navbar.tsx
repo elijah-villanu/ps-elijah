@@ -16,7 +16,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
 
     return (
         <nav className="sticky top-0 z-10 bg-gray-300 p-4">
-            <div className="mx-auto flex w-full max-w-3xl items-center justify-between">
+            <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
                 <h1 className="text-4xl">Elijah Villanueva</h1>
 
                 {/* Desktop nav */}
