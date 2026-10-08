@@ -9,6 +9,8 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
+    // Only listen on localhost; set to true to reach the WSL server by its IP if localhost forwarding breaks
+    host: false,
     // Polls for changes instead of OS file checks (running on WSL)
     watch: {
       usePolling: true,
