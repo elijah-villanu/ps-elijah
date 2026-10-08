@@ -42,3 +42,16 @@
     line-height: 1.5;
   }
 }
+
+/* Border edges facing the light glow brighter than the base. AboutPage points the light at the mouse; without one it stays top-right */
+@utility light-border {
+  --border-base: 0.35;
+  --border-boost: 0.45;
+  --light-x: 0.71;
+  --light-y: -0.71;
+  border-top-color: rgb(255 255 255 / calc(var(--border-base) + var(--border-boost) * max(0, -1 * var(--light-y))));
+  border-right-color: rgb(255 255 255 / calc(var(--border-base) + var(--border-boost) * max(0, var(--light-x))));
+  border-bottom-color: rgb(255 255 255 / calc(var(--border-base) + var(--border-boost) * max(0, var(--light-y))));
+  border-left-color: rgb(255 255 255 / calc(var(--border-base) + var(--border-boost) * max(0, -1 * var(--light-x))));
+  transition: border-color 0.2s ease-out;
+}

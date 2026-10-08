@@ -56,7 +56,7 @@ function ProjectItem({ title, summary, imgPath, year, role, tags, links }: Proje
     return (
         <>
             {/* Desktop: image fills the card, a blurred panel slides up on hover */}
-            <article className="group relative aspect-3/2 overflow-hidden rounded-2xl border-[3px] border-white/30 text-white backdrop-blur-[2px] max-[600px]:hidden">
+            <article className="group relative aspect-3/2 overflow-hidden rounded-2xl border-[2px] light-border text-white backdrop-blur-[4px] backdrop-brightness-117 max-[600px]:hidden">
                 <img src={imgPath} alt="" className="absolute inset-0 size-full object-cover" />
                 {/* Gradient behind the title at rest */}
                 <div className={`absolute inset-0 ${restGradient}`} />
@@ -110,11 +110,11 @@ function ProjectItem({ title, summary, imgPath, year, role, tags, links }: Proje
                 </div>
 
                 {/* Glass inner glow, layered above the image so it stays visible */}
-                <div className="pointer-events-none absolute inset-0 rounded-[13px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]" />
+                <div className="pointer-events-none absolute inset-0 rounded-[14px] shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)]" />
             </article>
 
             {/* Mobile: no hover, so everything is shown in a vertical glass card */}
-            <article className="hidden flex-col gap-3.5 rounded-2xl border-[3px] border-white/30 bg-white/20 p-3 shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)] backdrop-blur-[2px] max-[600px]:flex">
+            <article className="hidden flex-col gap-3.5 rounded-2xl border-[2px] light-border bg-white/28 p-3 shadow-[inset_0_0_8px_1px_rgb(255_255_255/0.3)] backdrop-blur-[4px] backdrop-brightness-117 max-[600px]:flex">
                 <img src={imgPath} alt="" className="aspect-16/10 w-full rounded-[10px] object-cover" />
                 <div className="flex flex-col gap-3 px-1 pb-0.5">
                     <div className="flex flex-col gap-1">

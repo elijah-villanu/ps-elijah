@@ -25,6 +25,30 @@ function App() {
     });
   }, []);
 
+  // Point each card's light-border at the mouse; touch-only devices keep the CSS default
+  useEffect(() => {
+    let frame = 0
+    const onMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        for (const card of document.querySelectorAll<HTMLElement>(".light-border")) {
+          const rect = card.getBoundingClientRect()
+          const dx = e.clientX - (rect.left + rect.width / 2)
+          const dy = e.clientY - (rect.top + rect.height / 2)
+          const length = Math.hypot(dx, dy) || 1
+          card.style.setProperty("--light-x", `${dx / length}`)
+          card.style.setProperty("--light-y", `${dy / length}`)
+        }
+      })
+    }
+    window.addEventListener("pointermove", onMove)
+    return () => {
+      window.removeEventListener("pointermove", onMove)
+      cancelAnimationFrame(frame)
+    }
+  }, [])
+
   // Returns page to render based on state
   function renderPage() {
     switch (activePage) {
@@ -39,9 +63,7 @@ function App() {
 
   return (
     <div className="font-mono">
-      <Backdrop
-        activePage={activePage}
-      />
+      <Backdrop />
       <Navbar 
         activePage={activePage}
         setActivePage={setActivePage}
