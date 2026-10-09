@@ -19,7 +19,7 @@ const linkMeta: Record<LinkKind, { icon: string; label: string }> = {
 // Desktop shows this many tags, the rest collapse into "+N" until hover
 const VISIBLE_TAGS = 4
 
-const darkTag = "items-center whitespace-nowrap rounded-full border border-white/35 bg-white/15 px-[9px] py-[3px] font-sans text-xs font-medium leading-[1.4] text-white shadow-[inset_0_0_6px_rgb(255_255_255/0.2)] backdrop-blur-sm"
+const darkTag = "items-center whitespace-nowrap rounded-full border border-white/35 bg-white/15 px-[9px] py-[3px] font-sans text-xs font-medium leading-[1.4] text-white shadow-[inset_0_0_6px_rgb(255_255_255/0.2)]"
 const lightTag = "inline-flex items-center whitespace-nowrap rounded-full border border-white/75 bg-white/45 px-2.5 py-1 font-sans text-xs font-medium leading-[1.4] shadow-[inset_0_0_6px_rgb(255_255_255/0.5)]"
 
 // Eased stops so the fade has no visible edge over light images

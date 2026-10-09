@@ -5,6 +5,8 @@ import stanfordIcon from "../assets/projects/stanford.png"
 import potionIcon from "../assets/projects/potion.png"
 import researchIcon from "../assets/projects/research.png"
 import ecosystemIcon from "../assets/projects/ecosystem.png"
+import journeyIcon from "../assets/projects/journey.png"
+import playingIcon from "../assets/projects/playing.png"
 
 const projects: Array<{
     title: string;
@@ -15,6 +17,16 @@ const projects: Array<{
     tags: Array<string>;
     links: Array<ProjectLink>;
 }> = [
+    {
+        title: "JourneyJob",
+        summary:
+            "",
+        imgPath: journeyIcon,
+        year: "2026",
+        role: "",
+        tags: ["Claude Code", "Agentic AI", "MCP", "AWS"],
+        links: [{ kind: "github", url:"https://github.com/elijah-villanu/jTracks"}]
+    },
     {
         title: "Ocean Site One VR",
         summary:
@@ -27,6 +39,19 @@ const projects: Array<{
             { kind: "github", url: ""},
             { kind: "website", url: "https://laes.calpoly.edu/OSOprojects" }
         ],
+    },
+    {
+        title: "IM NOT PLAYING",
+        summary:
+            "Submission the Cal Poly Game development Memorial day game jam.",
+        imgPath: playingIcon,
+        year: "2026",
+        role: "Game Jam",
+        tags: ["Godot", "Github"],
+        links:[ 
+            { kind: "itch", url: "https://eli-villi.itch.io/im-not-playing"},
+            { kind: "github", url: "https://github.com/elijah-villanu/ozcario_ware"}
+        ]
     },
     {
         title: "Potion Profits",
@@ -73,7 +98,7 @@ const projects: Array<{
         role: "Contributor",
         tags: ["Python", "SQL", "PostgreSQL", "FastAPI", "Docker"],
         links: [{ kind: "github", url: "https://github.com/hlathery/Virtual-Ecosystem" }],
-    },
+    }
 ];
 
 function ProjectsPage() {
