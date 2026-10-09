@@ -10,14 +10,14 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navItems: { label: string; page: Page }[] = [
-        { label: "ABOUT ME", page: "about" },
-        { label: "PROJECTS", page: "projects" },
+        { label: "About", page: "about" },
+        { label: "Projects", page: "projects" },
     ];
 
     return (
-        <nav className="sticky top-0 z-10 border-b border-white/8 bg-black/10 p-4 backdrop-blur-md">
-            <div className="mx-auto flex w-full max-w-3xl items-center justify-between">
-                <h3>ELIJAH VILLANUEVA</h3>
+        <nav className="sticky top-0 z-10 bg-gray-300 p-4">
+            <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
+                <h1 className="text-4xl">Elijah Villanueva</h1>
 
                 {/* Desktop nav */}
                 <div id="links" className="flex gap-9 max-[600px]:hidden">
@@ -33,7 +33,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                                     : "after:w-0 hover:after:w-[calc(100%-2rem)] hover:after:bg-black/40"
                                 }`}
                         >
-                            {item.label}
+                            <h2>{item.label}</h2>
                         </button>
                     ))}
                 </div>
@@ -62,7 +62,7 @@ function Navbar({ activePage, setActivePage }: NavbarProps) {
                                 setActivePage(item.page);
                                 setIsMenuOpen(false);
                             }}
-                            className={`cursor-pointer rounded-xl px-4 py-3 text-left transition-all duration-300 ${activePage === item.page
+                            className={`cursor-pointer rounded-xl px-4 py-3 text-left font-sans transition-all text-22 font-bold duration-300 ${activePage === item.page
                                 ? "bg-white/20 text-black"
                                 : "text-black hover:bg-white/10"
                                 }`}

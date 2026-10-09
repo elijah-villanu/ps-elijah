@@ -1,5 +1,4 @@
 import profileIcon from "../assets/profile.jpg";
-import re8Icon from "../assets/re8.png";
 import githubIcon from "../assets/github.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import itchioIcon from "../assets/itchio.svg";
@@ -13,7 +12,6 @@ import ecosystemIcon from "../assets/projects/ecosystem.png"
 
 export const preloadImages = [
   profileIcon,
-  re8Icon,
   githubIcon,
   linkedinIcon,
   itchioIcon,

@@ -1,0 +1,9 @@
+{
+  "enabledMcpjsonServers": [
+    "shadcn",
+    "magicuidesign-mcp"
+  ],
+  "enabledPlugins": {
+    "ponytail@ponytail": true
+  }
+}
