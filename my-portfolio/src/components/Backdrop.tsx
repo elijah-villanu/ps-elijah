@@ -1,3 +1,4 @@
+import type { Ref } from "react";
 import backdrop1920 from "../assets/backdrop-1920.webp";
 import backdrop2880 from "../assets/backdrop-2880.webp";
 
@@ -6,9 +7,9 @@ const skyGradient = "bg-[linear-gradient(135deg,hsl(210_45%_96%)_0%,hsl(230_35%_
 
 // Static photo backdrop. It is drawn at least 1920px wide and never shrinks,
 // so narrower screens crop the sides; its 4:3 height always covers the screen.
-function Backdrop() {
+function Backdrop({ ref }: { ref: Ref<HTMLDivElement> }) {
     return (
-        <div aria-hidden="true" className={`fixed inset-0 -z-100 overflow-hidden opacity-80 ${skyGradient}`}>
+        <div ref={ref} aria-hidden="true" className={`fixed inset-0 -z-100 overflow-hidden opacity-80 ${skyGradient}`}>
             <img
                 src={backdrop1920}
                 srcSet={`${backdrop1920} 1920w, ${backdrop2880} 2880w`}

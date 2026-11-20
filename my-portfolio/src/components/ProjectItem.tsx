@@ -99,7 +99,7 @@ function ProjectItem({ title, summary, imgPath, year, role, tags, links }: Proje
                         <div className="flex flex-wrap gap-2">
                             {links.map((link) => (
                                 <a key={link.url} href={link.url} target="_blank" rel="noreferrer"
-                                    className="flex items-center gap-1.5 rounded-full border border-white/40 bg-white/20 px-3 py-1.5 font-sans text-[13px] font-semibold leading-[1.3] shadow-[inset_0_0_6px_rgb(255_255_255/0.25)] backdrop-blur-sm transition-colors hover:bg-white/30"
+                                    className="flex items-center gap-1.5 rounded-full border border-white/40 bg-white/20 px-3 py-1.5 font-sans text-[13px] font-semibold leading-[1.3] shadow-[inset_0_0_6px_rgb(255_255_255/0.25)] transition-colors hover:bg-white/30"
                                 >
                                     <Icon icon={linkMeta[link.kind].icon} className="size-3.5" />
                                     {linkMeta[link.kind].label}
