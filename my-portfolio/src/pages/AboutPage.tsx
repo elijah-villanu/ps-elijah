@@ -22,7 +22,7 @@ const skillGroups = [
     { caption: "Tools", items: techItems.toolsItems },
 ]
 
-const resumeLink = "https://drive.google.com/file/d/1weMiCbCpEFJseu3DvYw_fxZyFhAunKOa/view?usp=sharing"
+const resumeLink = "https://drive.google.com/file/d/1X_Wbr14nGt2DIJU4PTLVvavEog5kpir7/view?usp=sharing"
 
 const experienceItems = [
     {
